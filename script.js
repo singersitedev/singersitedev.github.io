@@ -38,6 +38,9 @@ function confirmButtonAdd() {
             videoTitle: document.getElementById("videoTitleField").value
         };
     }
+    //TEST CODE
+    console.log(data);
+    return;
     fetch(document.getElementById("serverUrlField").value, {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
@@ -75,6 +78,9 @@ function confirmButtonGetRequest() {
         page: 'page',
         index: document.getElementById('getRequestIndex').value
     };
+    //TEST CODE
+    console.log(data);
+    return;
     fetch(document.getElementById("serverUrlField").value, {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
