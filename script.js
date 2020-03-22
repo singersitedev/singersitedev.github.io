@@ -437,8 +437,8 @@ function setFormContainerAdd() {
         addForm.appendChild(videoPreviewUrlField);
         addForm.appendChild(videoUrlText);
         addForm.appendChild(videoUrlField);
-        addForm.appendChild(photoTitleText);
-        addForm.appendChild(photoTitleField);
+        addForm.appendChild(videoTitleText);
+        addForm.appendChild(videoTitleField);
     }
     const confirmButton = document.createElement("button");
     confirmButton.setAttribute("id", "confirmButton");
