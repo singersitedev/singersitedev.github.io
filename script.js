@@ -40,6 +40,7 @@ function confirmButtonAdd() {
     }
     //TEST CODE
     console.log(data);
+    window.confirm("sometext");
     return;
     fetch(document.getElementById("serverUrlField").value, {
         method: 'post',
@@ -80,6 +81,7 @@ function confirmButtonGetRequest() {
     };
     //TEST CODE
     console.log(data);
+    window.confirm("sometext");
     return;
     fetch(document.getElementById("serverUrlField").value, {
         method: 'post',
