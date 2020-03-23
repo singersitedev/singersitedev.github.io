@@ -76,7 +76,7 @@ function confirmButtonGetRequest() {
     let data = {
         password: document.getElementById("serverPasswordField").value,
         action: 'getRequest',
-        page: 'page',
+        page: page,
         index: document.getElementById('getRequestIndex').value
     };
     //TEST CODE
