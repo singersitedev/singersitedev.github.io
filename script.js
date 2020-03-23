@@ -394,8 +394,8 @@ function setFormContainerAdd() {
         addForm.appendChild(eventNameField);
         addForm.appendChild(eventLocationText);
         addForm.appendChild(eventLocationField);
-        addForm.appendChild(eventLocationText);
-        addForm.appendChild(eventLocationField);
+        addForm.appendChild(eventLinkText);
+        addForm.appendChild(eventLinkField);
     }
     else if(page == "photoGallery") {
         const photoUrlText = document.createElement('p');
