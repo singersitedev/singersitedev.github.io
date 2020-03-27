@@ -127,7 +127,6 @@ function confirmButtonEdit() {
             password: document.getElementById("serverPasswordField").value,
             action: 'edit',
             page: 'photoGallery',
-            index: index,
             photoUrl: document.getElementById("photoUrlField").value,
             photoTitle: document.getElementById("photoTitleField").value
         };
@@ -137,7 +136,6 @@ function confirmButtonEdit() {
             password: document.getElementById("serverPasswordField").value,
             action: 'edit',
             page: 'musicAndVideos',
-            index: index,
             videoPreviewUrl: document.getElementById("vieoPreviewUrlField").value,
             videoUrl: document.getElementById("videoUrlField").value,
             videoTitle: document.getElementById("videoTitleField").value
@@ -187,17 +185,17 @@ function confirmButtonDelete() {
     else if(page == "photoGallery") {
         data = {
             password: document.getElementById("serverPasswordField").value,
-            action: 'edit',
+            action: 'delete',
             page: 'photoGallery',
-            index: index
+            deleteTitle: document.getElementById("photoTitleField").value
         };
     }
     else if(page == "musicAndVideos") {
         data = {
             password: document.getElementById("serverPasswordField").value,
-            action: 'edit',
+            action: 'delete',
             page: 'musicAndVideos',
-            index: index
+            deleteTitle: document.getElementById("videoTitleField").value
         };
     }
     fetch(document.getElementById("serverUrlField").value, {
@@ -679,8 +677,8 @@ function setFormContainerDelete(data) {
         deleteForm.appendChild(videoPreviewUrlField);
         deleteForm.appendChild(videoUrlText);
         deleteForm.appendChild(videoUrlField);
-        deleteForm.appendChild(photoTitleText);
-        deleteForm.appendChild(photoTitleField);
+        deleteForm.appendChild(videoTitleText);
+        deleteForm.appendChild(videoTitleField);
 
         let videoPreviewUrl = document.getElementById("videoP{reviewUrlField");
         videoPreviewUrl.value = data.videoPreviewUrl;
