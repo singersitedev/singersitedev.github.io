@@ -40,7 +40,7 @@ function confirmButtonAdd() {
     }
     //TEST CODE
     console.log(data);
-    window.confirm("sometext");
+    window.confirm(data);
     fetch(document.getElementById("serverUrlField").value, {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
@@ -49,6 +49,7 @@ function confirmButtonAdd() {
         .then(data => {
             console.log("post: ");
             console.log(data);
+            window.confirm(data);
             page = null;
             action = null;
         });
