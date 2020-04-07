@@ -81,7 +81,6 @@ function confirmButtonGetRequest() {
     //TEST CODE
     console.log(data);
     window.confirm("sometext");
-    return;
     fetch(document.getElementById("serverUrlField").value, {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
