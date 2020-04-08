@@ -270,63 +270,63 @@ function setFormContainerAdd() {
         
         const monthJan = document.createElement('option');
         monthJan.setAttribute('id', "monthJan");
-        monthJan.setAttribute("value", "jan");
-        monthJan.innerHTML = "jan";
+        monthJan.setAttribute("value", "Jan");
+        monthJan.innerHTML = "Jan";
 
         const monthFeb = document.createElement('option');
         monthFeb.setAttribute('id', "monthFeb");
-        monthFeb.setAttribute("value", "feb");
-        monthFeb.innerHTML = "feb";
+        monthFeb.setAttribute("value", "Feb");
+        monthFeb.innerHTML = "Feb";
 
         const monthMar = document.createElement('option');
         monthMar.setAttribute('id', "monthMar");
-        monthMar.setAttribute("value", "mar");
-        monthMar.innerHTML = "mar";
+        monthMar.setAttribute("value", "Mar");
+        monthMar.innerHTML = "Mar";
 
         const monthApr = document.createElement('option');
         monthApr.setAttribute('id', "monthApr");
-        monthApr.setAttribute("value", "apr");
-        monthApr.innerHTML = "apr";
+        monthApr.setAttribute("value", "Apr");
+        monthApr.innerHTML = "Apr";
 
         const monthMay = document.createElement('option');
         monthMay.setAttribute('id', "monthMay");
-        monthMay.setAttribute("value", "may");
-        monthMay.innerHTML = "may";
+        monthMay.setAttribute("value", "May");
+        monthMay.innerHTML = "May";
 
         const monthJun = document.createElement('option');
         monthJun.setAttribute('id', "monthJun");
-        monthJun.setAttribute("value", "jun");
-        monthJun.innerHTML = "jun";
+        monthJun.setAttribute("value", "Jun");
+        monthJun.innerHTML = "Jun";
 
         const monthJul = document.createElement('option');
         monthJul.setAttribute('id', "monthJul");
-        monthJul.setAttribute("value", "jul");
-        monthJul.innerHTML = "jul";
+        monthJul.setAttribute("value", "Jul");
+        monthJul.innerHTML = "Jul";
 
         const monthAug = document.createElement('option');
         monthAug.setAttribute('id', "monthAug");
-        monthAug.setAttribute("value", "aug");
-        monthAug.innerHTML = "aug";
+        monthAug.setAttribute("value", "Aug");
+        monthAug.innerHTML = "Aug";
 
         const monthSep = document.createElement('option');
         monthSep.setAttribute('id', "monthSep");
-        monthSep.setAttribute("value", "sep");
-        monthSep.innerHTML = "sep";
+        monthSep.setAttribute("value", "Sep");
+        monthSep.innerHTML = "Sep";
 
         const monthOct = document.createElement('option');
         monthOct.setAttribute('id', "monthOct");
-        monthOct.setAttribute("value", "oct");
-        monthOct.innerHTML = "oct";
+        monthOct.setAttribute("value", "Oct");
+        monthOct.innerHTML = "Oct";
 
         const monthNov = document.createElement('option');
         monthNov.setAttribute('id', "monthNov");
-        monthNov.setAttribute("value", "nov");
-        monthNov.innerHTML = "nov";
+        monthNov.setAttribute("value", "Nov");
+        monthNov.innerHTML = "Nov";
 
         const monthDec = document.createElement('option');
         monthDec.setAttribute('id', "monthDec");
-        monthDec.setAttribute("value", "dec");
-        monthDec.innerHTML = "dec";
+        monthDec.setAttribute("value", "Dec");
+        monthDec.innerHTML = "Dec";
 
         const dayText = document.createElement('p');
         dayText.setAttribute('id', "dayText");
@@ -484,63 +484,63 @@ function setFormContainerDelete(data) {
         
         const monthJan = document.createElement('option');
         monthJan.setAttribute('id', "monthJan");
-        monthJan.setAttribute("value", "jan");
-        monthJan.innerHTML = "jan";
+        monthJan.setAttribute("value", "Jan");
+        monthJan.innerHTML = "Jan";
 
         const monthFeb = document.createElement('option');
         monthFeb.setAttribute('id', "monthFeb");
-        monthFeb.setAttribute("value", "feb");
-        monthFeb.innerHTML = "feb";
+        monthFeb.setAttribute("value", "Feb");
+        monthFeb.innerHTML = "Feb";
 
         const monthMar = document.createElement('option');
         monthMar.setAttribute('id', "monthMar");
-        monthMar.setAttribute("value", "mar");
-        monthMar.innerHTML = "mar";
+        monthMar.setAttribute("value", "Mar");
+        monthMar.innerHTML = "Mar";
 
         const monthApr = document.createElement('option');
         monthApr.setAttribute('id', "monthApr");
-        monthApr.setAttribute("value", "apr");
-        monthApr.innerHTML = "apr";
+        monthApr.setAttribute("value", "Apr");
+        monthApr.innerHTML = "Apr";
 
         const monthMay = document.createElement('option');
         monthMay.setAttribute('id', "monthMay");
-        monthMay.setAttribute("value", "may");
-        monthMay.innerHTML = "may";
+        monthMay.setAttribute("value", "May");
+        monthMay.innerHTML = "May";
 
         const monthJun = document.createElement('option');
         monthJun.setAttribute('id', "monthJun");
-        monthJun.setAttribute("value", "jun");
-        monthJun.innerHTML = "jun";
+        monthJun.setAttribute("value", "Jun");
+        monthJun.innerHTML = "Jun";
 
         const monthJul = document.createElement('option');
         monthJul.setAttribute('id', "monthJul");
-        monthJul.setAttribute("value", "jul");
-        monthJul.innerHTML = "jul";
+        monthJul.setAttribute("value", "Jul");
+        monthJul.innerHTML = "Jul";
 
         const monthAug = document.createElement('option');
         monthAug.setAttribute('id', "monthAug");
-        monthAug.setAttribute("value", "aug");
-        monthAug.innerHTML = "aug";
+        monthAug.setAttribute("value", "Aug");
+        monthAug.innerHTML = "Aug";
 
         const monthSep = document.createElement('option');
         monthSep.setAttribute('id', "monthSep");
-        monthSep.setAttribute("value", "sep");
-        monthSep.innerHTML = "sep";
+        monthSep.setAttribute("value", "Sep");
+        monthSep.innerHTML = "Sep";
 
         const monthOct = document.createElement('option');
         monthOct.setAttribute('id', "monthOct");
-        monthOct.setAttribute("value", "oct");
-        monthOct.innerHTML = "oct";
+        monthOct.setAttribute("value", "Oct");
+        monthOct.innerHTML = "Oct";
 
         const monthNov = document.createElement('option');
         monthNov.setAttribute('id', "monthNov");
-        monthNov.setAttribute("value", "nov");
-        monthNov.innerHTML = "nov";
+        monthNov.setAttribute("value", "Nov");
+        monthNov.innerHTML = "Nov";
 
         const monthDec = document.createElement('option');
         monthDec.setAttribute('id', "monthDec");
-        monthDec.setAttribute("value", "dec");
-        monthDec.innerHTML = "dec";
+        monthDec.setAttribute("value", "Dec");
+        monthDec.innerHTML = "Dec";
 
         const dayText = document.createElement('p');
         dayText.setAttribute('id', "dayText");
@@ -767,63 +767,63 @@ function setFormContainerEdit(data) {
         
         const monthJan = document.createElement('option');
         monthJan.setAttribute('id', "monthJan");
-        monthJan.setAttribute("value", "jan");
-        monthJan.innerHTML = "jan";
+        monthJan.setAttribute("value", "Jan");
+        monthJan.innerHTML = "Jan";
 
         const monthFeb = document.createElement('option');
         monthFeb.setAttribute('id', "monthFeb");
-        monthFeb.setAttribute("value", "feb");
-        monthFeb.innerHTML = "feb";
+        monthFeb.setAttribute("value", "Feb");
+        monthFeb.innerHTML = "Feb";
 
         const monthMar = document.createElement('option');
         monthMar.setAttribute('id', "monthMar");
-        monthMar.setAttribute("value", "mar");
-        monthMar.innerHTML = "mar";
+        monthMar.setAttribute("value", "Mar");
+        monthMar.innerHTML = "Mar";
 
         const monthApr = document.createElement('option');
         monthApr.setAttribute('id', "monthApr");
-        monthApr.setAttribute("value", "apr");
-        monthApr.innerHTML = "apr";
+        monthApr.setAttribute("value", "Apr");
+        monthApr.innerHTML = "Apr";
 
         const monthMay = document.createElement('option');
         monthMay.setAttribute('id', "monthMay");
-        monthMay.setAttribute("value", "may");
-        monthMay.innerHTML = "may";
+        monthMay.setAttribute("value", "May");
+        monthMay.innerHTML = "May";
 
         const monthJun = document.createElement('option');
         monthJun.setAttribute('id', "monthJun");
-        monthJun.setAttribute("value", "jun");
-        monthJun.innerHTML = "jun";
+        monthJun.setAttribute("value", "Jun");
+        monthJun.innerHTML = "Jun";
 
         const monthJul = document.createElement('option');
         monthJul.setAttribute('id', "monthJul");
-        monthJul.setAttribute("value", "jul");
-        monthJul.innerHTML = "jul";
+        monthJul.setAttribute("value", "Jul");
+        monthJul.innerHTML = "Jul";
 
         const monthAug = document.createElement('option');
         monthAug.setAttribute('id', "monthAug");
-        monthAug.setAttribute("value", "aug");
-        monthAug.innerHTML = "aug";
+        monthAug.setAttribute("value", "Aug");
+        monthAug.innerHTML = "Aug";
 
         const monthSep = document.createElement('option');
         monthSep.setAttribute('id', "monthSep");
-        monthSep.setAttribute("value", "sep");
-        monthSep.innerHTML = "sep";
+        monthSep.setAttribute("value", "Sep");
+        monthSep.innerHTML = "Sep";
 
         const monthOct = document.createElement('option');
         monthOct.setAttribute('id', "monthOct");
-        monthOct.setAttribute("value", "oct");
-        monthOct.innerHTML = "oct";
+        monthOct.setAttribute("value", "Oct");
+        monthOct.innerHTML = "Oct";
 
         const monthNov = document.createElement('option');
         monthNov.setAttribute('id', "monthNov");
-        monthNov.setAttribute("value", "nov");
-        monthNov.innerHTML = "nov";
+        monthNov.setAttribute("value", "Nov");
+        monthNov.innerHTML = "Nov";
 
         const monthDec = document.createElement('option');
         monthDec.setAttribute('id', "monthDec");
-        monthDec.setAttribute("value", "dec");
-        monthDec.innerHTML = "dec";
+        monthDec.setAttribute("value", "Dec");
+        monthDec.innerHTML = "Dec";
 
         const dayText = document.createElement('p');
         dayText.setAttribute('id', "dayText");
