@@ -13,6 +13,7 @@ function confirmButtonAdd() {
             month: document.getElementById("monthSelect").value,
             day: document.getElementById("dayField").value,
             year: document.getElementById("yearField").value,
+            eventTime : document.getElementById("eventTimeField").value,
             eventImage: document.getElementById("eventImageField").value,
             eventName: document.getElementById("eventNameField").value,
             eventLocation: document.getElementById("eventLocationField").value,
@@ -115,6 +116,7 @@ function confirmButtonEdit() {
             month: document.getElementById("monthSelect").value,
             day: document.getElementById("dayField").value,
             year: document.getElementById("yearField").value,
+            eventTime: document.getElementById("eventTimeField").value,
             eventImage: document.getElementById("eventImageField").value,
             eventName: document.getElementById("eventNameField").value,
             eventLocation: document.getElementById("eventLocationField").value,
@@ -342,6 +344,13 @@ function setFormContainerAdd() {
         yearField.setAttribute("id", "yearField");
         yearField.setAttribute('type', "text");
 
+        const eventTimeText = document.createElement('p');
+        eventTimeText.setAttribute('id', "eventTimeText");
+        eventTimeText.innerHTML = "event time";
+        const eventTimeField = document.createElement("input");
+        eventTimeField.setAttribute("id", "eventTimeField");
+        eventTimeField.setAttribute('type', "text");
+
         const eventImageText = document.createElement('p');
         eventImageText.setAttribute('id', "eventImageText");
         eventImageText.innerHTML = "event image url";
@@ -387,6 +396,8 @@ function setFormContainerAdd() {
         addForm.appendChild(dayField);
         addForm.appendChild(yearText);
         addForm.appendChild(yearField);
+        addForm.appendChild(eventTimeText);
+        addForm.appendChild(eventTimeField);
         addForm.appendChild(eventImageText);
         addForm.appendChild(eventImageField);
         addForm.appendChild(eventNameText);
@@ -556,6 +567,13 @@ function setFormContainerDelete(data) {
         yearField.setAttribute("id", "yearField");
         yearField.setAttribute('type', "text");
 
+        const eventTimeText = document.createElement('p');
+        eventTimeText.setAttribute('id', "eventTimeText");
+        eventTimeText.innerHTML = "event time";
+        const eventTimeField = document.createElement("input");
+        eventTimeField.setAttribute("id", "eventTimeField");
+        eventTimeField.setAttribute('type', "text");
+
         const eventImageText = document.createElement('p');
         eventImageText.setAttribute('id', "eventImageText");
         eventImageText.innerHTML = "event image url";
@@ -601,6 +619,8 @@ function setFormContainerDelete(data) {
         deleteForm.appendChild(dayField);
         deleteForm.appendChild(yearText);
         deleteForm.appendChild(yearField);
+        deleteForm.appendChild(eventTimeText);
+        deleteForm.appendChild(eventTimeField);
         deleteForm.appendChild(eventImageText);
         deleteForm.appendChild(eventImageField);
         deleteForm.appendChild(eventNameText);
@@ -616,6 +636,8 @@ function setFormContainerDelete(data) {
         day.value = data.day;
         let year = document.getElementById("yearField");
         year.value = data.year;
+        let eventTime = document.getElementById("eventTimeField");
+        eventTime.value = data.eventTime;
         let eventImage = document.getElementById("eventImageField");
         eventImage.value = data.eventImage;
         let eventName = document.getElementById("eventNameField");
@@ -839,6 +861,13 @@ function setFormContainerEdit(data) {
         yearField.setAttribute("id", "yearField");
         yearField.setAttribute('type', "text");
 
+        const eventTimeText = document.createElement('p');
+        eventTimeText.setAttribute('id', "eventTimeText");
+        eventTimeText.innerHTML = "event time";
+        const eventTimeField = document.createElement("input");
+        eventTimesField.setAttribute("id", "eventTimeField");
+        eventTimeField.setAttribute('type', "text");
+
         const eventImageText = document.createElement('p');
         eventImageText.setAttribute('id', "eventImageText");
         eventImageText.innerHTML = "event image url";
@@ -884,6 +913,8 @@ function setFormContainerEdit(data) {
         editForm.appendChild(dayField);
         editForm.appendChild(yearText);
         editForm.appendChild(yearField);
+        editForm.appendChild(eventTimeText);
+        editForm.appendChild(eventTimeField);
         editForm.appendChild(eventImageText);
         editForm.appendChild(eventImageField);
         editForm.appendChild(eventNameText);
@@ -899,6 +930,8 @@ function setFormContainerEdit(data) {
         day.value = data.day;
         let year = document.getElementById("yearField");
         year.value = data.year;
+        let eventTime = document.getElementById("eventTimeField");
+        eventTime.value = data.eventTime;
         let eventImage = document.getElementById("eventImageField");
         eventImage.value = data.eventImage;
         let eventName = document.getElementById("eventNameField");
