@@ -83,6 +83,7 @@ function confirmButtonGetRequest() {
     //TEST CODE
     console.log(data);
     window.confirm("sometext");
+    window.confirm(data);
     fetch(document.getElementById("serverUrlField").value, {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
@@ -465,6 +466,7 @@ function setFormContainerAdd() {
 }
 
 function setFormContainerDelete(data) {
+    console.log("does this ever run?");
     const deleteForm = document.createElement("form");
     deleteForm.setAttribute("id", "deleteForm");
 
