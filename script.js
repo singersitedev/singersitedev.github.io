@@ -199,6 +199,7 @@ function confirmButtonDelete() {
             deleteTitle: document.getElementById("videoTitleField").value
         };
     }
+    window.confirm(data);
     fetch(document.getElementById("serverUrlField").value, {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
