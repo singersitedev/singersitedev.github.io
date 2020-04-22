@@ -28,7 +28,7 @@ function resetUI() {
     let instructionHandle = document.createElement('p');
     instructionHandle.setAttribute('id', "instruction");
     instructionHandle.innerHTML = "select page: ";
-    let displayStateHandle = document.creatElement("p");
+    let displayStateHandle = document.createElement("p");
     displayStateHandle.setAttribute('id', "displayState");
     displayStateHandle.innerHTML = "selected state: page: " + state.page + " action: " + state.action;
     let selectUpcomingEventsAddHandle = document.createElement("button");
