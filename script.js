@@ -281,6 +281,8 @@ function setUpcomingEventsForm(serverData) {
     innerFormContainerHandle.appendChild(eventLinkText);
     innerFormContainerHandle.appendChild(eventLinkField);
 
+    console.log("test: gets here!");
+
     if(serverData != "null") {
         console.log("serverData below");
         console.log(serverData);
@@ -300,6 +302,10 @@ function setUpcomingEventsForm(serverData) {
         eventLocation.value = serverData.eventLocation;
         let eventLink = document.getElementById("eventLinkField");
         eventLink.value = serverData.eventLink;
+    }
+    else {
+        console.log("server data below");
+        console.log(serverData);
     }
 }
 
