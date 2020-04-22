@@ -457,7 +457,7 @@ function processPostAddRequest() {
         .then(serverData => {
             console.log("post: ");
             console.log(serverData);
-            window.confirm(dserverData);
+            window.confirm(serverData);
             resetUI();
         });
 }
