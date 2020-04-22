@@ -6,18 +6,24 @@
     <title>Database Updater</title>
 </head>
 <body>
-    <p>select page: </p>
-    <button id="selectPageUpcomingEventsAdd">upcoming events add</button>
-    <button id="selectPageUpcomingEventsEdit">upcoming events edit</button>
-    <button id="selectPageUpcomingEventsDelete">upcoming events delete</button>
-    <button id="selectPagePhotoGalleryAdd">photo gallery add</button>
-    <button id="selectPagePhotoGalleryEdit">photo gallery edit</button>
-    <button id="selectPagePhotoGalleryDelete">photo gallery delete</button>
-    <button id="selectPageMusicAndVideosAdd">music and videos add</button>
-    <button id="selectPageMusicAndVideosEdit">music and videos edit</button>
-    <button id="selectPageMusicAndVideosDelete">music and videos delete</button>
-
-    <div id="formContainer"></div>
+    <div id="formContainer">
+        <div id="innerFormContainer">
+            <p id="instruction">select page: </p>
+            <p id="displayState">selected state: page: select action: null</p>
+            <button id="selectUpcomingEventsAdd">upcoming events add</button>
+            <button id="selectUpcomingEventsEdit">upcoming events edit</button>
+            <button id="selectUpcomingEventsDelete">upcoming events delete</button>
+            <button id="selectPhotoGalleryAdd">photo gallery add</button>
+            <button id="selectPhotoGalleryEdit">photo gallery edit</button>
+            <button id="selectPhotoGalleryDelete">photo gallery delete</button>
+            <button id="selectMusicAndVideosAdd">music and videos add</button>
+            <button id="selectMusicAndVideosEdit">music and videos edit</button>
+            <button id="selectMusicAndVideosDelete">music and videos delete</button>
+        </div>
+        <div id= "confirmButtonContainer">
+            <button id="confirmButton">confirm</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
