@@ -53,7 +53,7 @@ function resetUI() {
     selectMusicAndVideosAddHandle.setAttribute('id', "selectMusicAndVideosAdd");
     selectMusicAndVideosAddHandle.innerHTML = "music and videos add";
     let selectMusicAndVideosEditHandle = document.createElement("button");
-    selectMusicAndVideosEditHandle.setAttribute('id', "selectMusicAndVideosyEdit");
+    selectMusicAndVideosEditHandle.setAttribute('id', "selectMusicAndVideosEdit");
     selectMusicAndVideosEditHandle.innerHTML = "music and videos edit";
     let selectMusicAndVideosDeleteHandle = document.createElement("button");
     selectMusicAndVideosDeleteHandle.setAttribute('id', "selectMusicAndVideosDelete");
