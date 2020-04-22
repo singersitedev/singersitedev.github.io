@@ -447,8 +447,8 @@ function processPostAddRequest() {
         };
     }
     //TEST CODE
-    console.log(data);
-    window.confirm(data);
+    console.log(clientData);
+    window.confirm(clientData);
     fetch(document.getElementById("serverUrlField").value, {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
