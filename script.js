@@ -282,6 +282,8 @@ function setUpcomingEventsForm(serverData) {
     innerFormContainerHandle.appendChild(eventLinkField);
 
     if(serverData != "null") {
+        console.log("serverData below");
+        console.log(serverData);
         let month = document.getElementById("monthSelect");
         month.value = serverData.month;
         let day = document.getElementById("dayField");
