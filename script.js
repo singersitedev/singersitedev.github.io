@@ -133,7 +133,7 @@ function setRequestBoilerplate() { //also removes previous innerFormContainer el
     innerFormContainerHandle.appendChild(serverPasswordText);
     innerFormContainerHandle.appendChild(serverPasswordField);
 
-    state.processAction = false;
+    state.processAction = true;
 }
 
 function setUpcomingEventsForm(serverData) {
