@@ -511,7 +511,7 @@ function processPostEditRequest() {
         });
 }
 
-processPostDeleteRequest() {
+function processPostDeleteRequest() {
     let clientData = null;
     if(state.page == "upcomingEvents") {
         clientData = {
