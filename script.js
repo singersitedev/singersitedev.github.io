@@ -402,7 +402,7 @@ function processGetRequest() {
     console.log(clientData);
     window.confirm("sometext");
     window.confirm(clientData);
-    if(document.getElementById("serverUrlField").value != undefined) {
+    if(document.getElementById("serverUrlField").value != '') {
         fetch(document.getElementById("serverUrlField").value, {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
