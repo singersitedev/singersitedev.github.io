@@ -424,142 +424,154 @@ function processGetRequest() {
 
 function processPostAddRequest() {
     let clientData = null;
-    if(state.page == "upcomingEvents") {
-        clientData = {
-            password: document.getElementById("serverPasswordField").value,
-            action: 'add',
-            page: 'upcomingEvents',
-            month: document.getElementById("monthSelect").value,
-            day: document.getElementById("dayField").value,
-            year: document.getElementById("yearField").value,
-            eventTime : document.getElementById("eventTimeField").value,
-            eventImage: document.getElementById("eventImageField").value,
-            eventName: document.getElementById("eventNameField").value,
-            eventLocation: document.getElementById("eventLocationField").value,
-            eventLink: document.getElementById("eventLinkField").value
-        };
+    if(document.getElementById("serverUrlField").value != undefined) {
+        if(state.page == "upcomingEvents") {
+            clientData = {
+                password: document.getElementById("serverPasswordField").value,
+                action: 'add',
+                page: 'upcomingEvents',
+                month: document.getElementById("monthSelect").value,
+                day: document.getElementById("dayField").value,
+                year: document.getElementById("yearField").value,
+                eventTime : document.getElementById("eventTimeField").value,
+                eventImage: document.getElementById("eventImageField").value,
+                eventName: document.getElementById("eventNameField").value,
+                eventLocation: document.getElementById("eventLocationField").value,
+                eventLink: document.getElementById("eventLinkField").value
+            };
+        }
+        else if(state.page == "photoGallery") {
+            clientData = {
+                password: document.getElementById("serverPasswordField").value,
+                action: 'add',
+                page: 'photoGallery',
+                photoUrl: document.getElementById("photoUrlField").value,
+                photoTitle: document.getElementById("photoTitleField").value
+            };
+        }
+        else if(state.page == "musicAndVideos") {
+            clientData = {
+                password: document.getElementById("serverPasswordField").value,
+                action: 'add',
+                page: 'musicAndVideos',
+                videoPreviewUrl: document.getElementById("vieoPreviewUrlField").value,
+                videoUrl: document.getElementById("videoUrlField").value,
+                videoTitle: document.getElementById("videoTitleField").value
+            };
+        }
+        //TEST CODE
+        console.log(clientData);
+        window.confirm(clientData);
+        fetch(document.getElementById("serverUrlField").value, {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({clientData})
+        }).then(response => response.json())
+            .then(serverData => {
+                console.log("post: ");
+                console.log(serverData);
+                window.confirm(serverData);
+                resetUI();
+            });
     }
-    else if(state.page == "photoGallery") {
-        clientData = {
-            password: document.getElementById("serverPasswordField").value,
-            action: 'add',
-            page: 'photoGallery',
-            photoUrl: document.getElementById("photoUrlField").value,
-            photoTitle: document.getElementById("photoTitleField").value
-        };
-    }
-    else if(state.page == "musicAndVideos") {
-        clientData = {
-            password: document.getElementById("serverPasswordField").value,
-            action: 'add',
-            page: 'musicAndVideos',
-            videoPreviewUrl: document.getElementById("vieoPreviewUrlField").value,
-            videoUrl: document.getElementById("videoUrlField").value,
-            videoTitle: document.getElementById("videoTitleField").value
-        };
-    }
-    //TEST CODE
-    console.log(clientData);
-    window.confirm(clientData);
-    fetch(document.getElementById("serverUrlField").value, {
-        method: 'post',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({clientData})
-    }).then(response => response.json())
-        .then(serverData => {
-            console.log("post: ");
-            console.log(serverData);
-            window.confirm(serverData);
-            resetUI();
-        });
+    else
+        console.log("error: no server address");
 }
 
 function processPostEditRequest() {
     let clientData = null;
-    if(state.page == "upcomingEvents") {
-        clientData = {
-            password: document.getElementById("serverPasswordField").value,
-            action: 'edit',
-            page: 'upcomingEvents',
-            index: state.index,
-            month: document.getElementById("monthSelect").value,
-            day: document.getElementById("dayField").value,
-            year: document.getElementById("yearField").value,
-            eventTime: document.getElementById("eventTimeField").value,
-            eventImage: document.getElementById("eventImageField").value,
-            eventName: document.getElementById("eventNameField").value,
-            eventLocation: document.getElementById("eventLocationField").value,
-            eventLink: document.getElementById("eventLinkField").value
-        };
+    if(document.getElementById("serverUrlField").value != undefined) {
+        if(state.page == "upcomingEvents") {
+            clientData = {
+                password: document.getElementById("serverPasswordField").value,
+                action: 'edit',
+                page: 'upcomingEvents',
+                index: state.index,
+                month: document.getElementById("monthSelect").value,
+                day: document.getElementById("dayField").value,
+                year: document.getElementById("yearField").value,
+                eventTime: document.getElementById("eventTimeField").value,
+                eventImage: document.getElementById("eventImageField").value,
+                eventName: document.getElementById("eventNameField").value,
+                eventLocation: document.getElementById("eventLocationField").value,
+                eventLink: document.getElementById("eventLinkField").value
+            };
+        }
+        else if(state.page == "photoGallery") {
+            clientData = {
+                password: document.getElementById("serverPasswordField").value,
+                action: 'edit',
+                page: 'photoGallery',
+                photoUrl: document.getElementById("photoUrlField").value,
+                photoTitle: document.getElementById("photoTitleField").value
+            };
+        }
+        else if(state.page == "musicAndVideos") {
+            clientData = {
+                password: document.getElementById("serverPasswordField").value,
+                action: 'edit',
+                page: 'musicAndVideos',
+                videoPreviewUrl: document.getElementById("vieoPreviewUrlField").value,
+                videoUrl: document.getElementById("videoUrlField").value,
+                videoTitle: document.getElementById("videoTitleField").value
+            };
+        }
+        fetch(document.getElementById("serverUrlField").value, {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({clientData})
+        }).then(response => response.json())
+            .then(serverData => {
+                console.log("post: ");
+                console.log(serverData);
+                resetUI();
+            });
     }
-    else if(state.page == "photoGallery") {
-        clientData = {
-            password: document.getElementById("serverPasswordField").value,
-            action: 'edit',
-            page: 'photoGallery',
-            photoUrl: document.getElementById("photoUrlField").value,
-            photoTitle: document.getElementById("photoTitleField").value
-        };
-    }
-    else if(state.page == "musicAndVideos") {
-        clientData = {
-            password: document.getElementById("serverPasswordField").value,
-            action: 'edit',
-            page: 'musicAndVideos',
-            videoPreviewUrl: document.getElementById("vieoPreviewUrlField").value,
-            videoUrl: document.getElementById("videoUrlField").value,
-            videoTitle: document.getElementById("videoTitleField").value
-        };
-    }
-    fetch(document.getElementById("serverUrlField").value, {
-        method: 'post',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({clientData})
-    }).then(response => response.json())
-        .then(serverData => {
-            console.log("post: ");
-            console.log(serverData);
-            resetUI();
-        });
+    else
+        console.log("error: no server address");
 }
 
 function processPostDeleteRequest() {
     let clientData = null;
-    if(state.page == "upcomingEvents") {
-        clientData = {
-            password: document.getElementById("serverPasswordField").value,
-            action: 'delete',
-            page: 'upcomingEvents',
-            index: state.index
-        };
+    if(document.getElementById("serverUrlField").value != undefined) {
+        if(state.page == "upcomingEvents") {
+            clientData = {
+                password: document.getElementById("serverPasswordField").value,
+                action: 'delete',
+                page: 'upcomingEvents',
+                index: state.index
+            };
+        }
+        else if(state.page == "photoGallery") {
+            clientData = {
+                password: document.getElementById("serverPasswordField").value,
+                action: 'delete',
+                page: 'photoGallery',
+                deleteTitle: document.getElementById("photoTitleField").value
+            };
+        }
+        else if(state.page == "musicAndVideos") {
+            clientData = {
+                password: document.getElementById("serverPasswordField").value,
+                action: 'delete',
+                page: 'musicAndVideos',
+                deleteTitle: document.getElementById("videoTitleField").value
+            };
+        }
+        window.confirm(clientData);
+        fetch(document.getElementById("serverUrlField").value, {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({clientData})
+        }).then(response => response.json())
+            .then(serverData => {
+                console.log("post: ");
+                console.log(serverData);
+                resetUI();
+            });
     }
-    else if(state.page == "photoGallery") {
-        clientData = {
-            password: document.getElementById("serverPasswordField").value,
-            action: 'delete',
-            page: 'photoGallery',
-            deleteTitle: document.getElementById("photoTitleField").value
-        };
-    }
-    else if(state.page == "musicAndVideos") {
-        clientData = {
-            password: document.getElementById("serverPasswordField").value,
-            action: 'delete',
-            page: 'musicAndVideos',
-            deleteTitle: document.getElementById("videoTitleField").value
-        };
-    }
-    window.confirm(clientData);
-    fetch(document.getElementById("serverUrlField").value, {
-        method: 'post',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({clientData})
-    }).then(response => response.json())
-        .then(serverData => {
-            console.log("post: ");
-            console.log(serverData);
-            resetUI();
-        });
+    else
+        console.log("error: no server address");
 }
 
 function processPostRequest() {
