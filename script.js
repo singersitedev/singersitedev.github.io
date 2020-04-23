@@ -282,6 +282,7 @@ function setUpcomingEventsForm(serverData) {
     innerFormContainerHandle.appendChild(eventLinkField);
 
     console.log("test: gets here!");
+    console.log("month: " + serverData.data.month);
 
     if(serverData != "null") {
         console.log("serverData below");
