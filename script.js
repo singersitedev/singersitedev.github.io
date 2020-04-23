@@ -424,7 +424,7 @@ function processGetRequest() {
 
 function processPostAddRequest() {
     let clientData = null;
-    if(document.getElementById("serverUrlField").value != undefined) {
+    if(document.getElementById("serverUrlField").value != '') {
         if(state.page == "upcomingEvents") {
             clientData = {
                 password: document.getElementById("serverPasswordField").value,
@@ -480,7 +480,7 @@ function processPostAddRequest() {
 
 function processPostEditRequest() {
     let clientData = null;
-    if(document.getElementById("serverUrlField").value != undefined) {
+    if(document.getElementById("serverUrlField").value != '') {
         if(state.page == "upcomingEvents") {
             clientData = {
                 password: document.getElementById("serverPasswordField").value,
@@ -533,7 +533,7 @@ function processPostEditRequest() {
 
 function processPostDeleteRequest() {
     let clientData = null;
-    if(document.getElementById("serverUrlField").value != undefined) {
+    if(document.getElementById("serverUrlField").value != '') {
         if(state.page == "upcomingEvents") {
             clientData = {
                 password: document.getElementById("serverPasswordField").value,
