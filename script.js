@@ -288,21 +288,21 @@ function setUpcomingEventsForm(serverData) {
         console.log("serverData below");
         console.log(serverData);
         let month = document.getElementById("monthSelect");
-        month.value = serverData.month;
+        month.value = serverData.data.month;
         let day = document.getElementById("dayField");
-        day.value = serverData.day;
+        day.value = serverData.data.day;
         let year = document.getElementById("yearField");
-        year.value = serverData.year;
+        year.value = serverData.data.year;
         let eventTime = document.getElementById("eventTimeField");
-        eventTime.value = serverData.eventTime;
+        eventTime.value = serverData.data.eventTime;
         let eventImage = document.getElementById("eventImageField");
-        eventImage.value = serverData.eventImage;
+        eventImage.value = serverData.data.eventImage;
         let eventName = document.getElementById("eventNameField");
-        eventName.value = serverData.eventName;
+        eventName.value = serverData.data.eventName;
         let eventLocation = document.getElementById("eventLocationField");
-        eventLocation.value = serverData.eventLocation;
+        eventLocation.value = serverData.data.eventLocation;
         let eventLink = document.getElementById("eventLinkField");
-        eventLink.value = serverData.eventLink;
+        eventLink.value = serverData.data.eventLink;
     }
     else {
         console.log("server data below");
@@ -333,9 +333,9 @@ function setPhotoGalleryForm(serverData) {
 
     if(serverData != "null") {
         let photoUrl = document.getElementById("photoUrlField");
-        photoUrl.value = serverData.photoUrl;
+        photoUrl.value = serverData.data.photoUrl;
         let photoTitle = document.getElementById("photoTitleField");
-        photoTitle.value = serverData.photoTitle;
+        photoTitle.value = serverData.data.photoTitle;
     }
 }
 
@@ -371,11 +371,11 @@ function setMusicAndVideosForm(serverData) {
 
     if(serverData != "null") {
         let videoPreviewUrl = document.getElementById("videoP{reviewUrlField");
-        videoPreviewUrl.value = serverData.videoPreviewUrl;
+        videoPreviewUrl.value = serverData.data.videoPreviewUrl;
         let videoUrl = document.getElementById("videoUrlField");
-        videoUrl.value = serverData.videoUrl;
+        videoUrl.value = serverData.data.videoUrl;
         let videoTitle = document.getElementById("videoTitleField");
-        videoTitle.value = serverData.videoTitle;
+        videoTitle.value = serverData.data.videoTitle;
     }
 }
 
