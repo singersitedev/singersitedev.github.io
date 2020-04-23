@@ -281,7 +281,7 @@ function setUpcomingEventsForm(serverData) {
     innerFormContainerHandle.appendChild(eventLinkText);
     innerFormContainerHandle.appendChild(eventLinkField);
 
-    if(serverData != "null" && serverData != "4: invalid index") {
+    if(serverData != "null" && serverData != "4: invalid index" && serverData != "3: invalid password") {
         console.log("serverData below");
         console.log(serverData);
         let month = document.getElementById("monthSelect");
@@ -330,7 +330,7 @@ function setPhotoGalleryForm(serverData) {
     innerFormContainerHandle.appendChild(photoTitleText);
     innerFormContainerHandle.appendChild(photoTitleField);
 
-    if(serverData != "null" && serverData != "4: invalid index") {
+    if(serverData != "null" && serverData != "4: invalid index" && serverData != "3: invalid password") {
         let photoUrl = document.getElementById("photoUrlField");
         photoUrl.value = serverData.data.photoUrl;
         let photoTitle = document.getElementById("photoTitleField");
@@ -368,7 +368,7 @@ function setMusicAndVideosForm(serverData) {
     innerFormContainerHandle.appendChild(videoTitleText);
     innerFormContainerHandle.appendChild(videoTitleField);
 
-    if(serverData != "null" && serverData != "4: invalid index") {
+    if(serverData != "null" && serverData != "4: invalid index" && serverData != "3: invalid password") {
         let videoPreviewUrl = document.getElementById("videoP{reviewUrlField");
         videoPreviewUrl.value = serverData.data.videoPreviewUrl;
         let videoUrl = document.getElementById("videoUrlField");
