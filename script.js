@@ -281,10 +281,7 @@ function setUpcomingEventsForm(serverData) {
     innerFormContainerHandle.appendChild(eventLinkText);
     innerFormContainerHandle.appendChild(eventLinkField);
 
-    console.log("test: gets here!");
-    console.log("month: " + serverData.data.month);
-
-    if(serverData != "null") {
+    if(serverData != "null" && serverData != "4: invalid index") {
         console.log("serverData below");
         console.log(serverData);
         let month = document.getElementById("monthSelect");
@@ -333,7 +330,7 @@ function setPhotoGalleryForm(serverData) {
     innerFormContainerHandle.appendChild(photoTitleText);
     innerFormContainerHandle.appendChild(photoTitleField);
 
-    if(serverData != "null") {
+    if(serverData != "null" && serverData != "4: invalid index") {
         let photoUrl = document.getElementById("photoUrlField");
         photoUrl.value = serverData.data.photoUrl;
         let photoTitle = document.getElementById("photoTitleField");
@@ -371,7 +368,7 @@ function setMusicAndVideosForm(serverData) {
     innerFormContainerHandle.appendChild(videoTitleText);
     innerFormContainerHandle.appendChild(videoTitleField);
 
-    if(serverData != "null") {
+    if(serverData != "null" && serverData != "4: invalid index") {
         let videoPreviewUrl = document.getElementById("videoP{reviewUrlField");
         videoPreviewUrl.value = serverData.data.videoPreviewUrl;
         let videoUrl = document.getElementById("videoUrlField");
@@ -405,7 +402,7 @@ function processGetRequest() {
     console.log(clientData);
     window.confirm("sometext");
     window.confirm(clientData);
-    if(document.getElementById("serverUrlField").value != null) {
+    if(document.getElementById("serverUrlField").value != undefined) {
         fetch(document.getElementById("serverUrlField").value, {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
