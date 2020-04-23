@@ -289,6 +289,8 @@ function setUpcomingEventsForm(serverData) {
         console.log(serverData);
         let month = document.getElementById("monthSelect");
         month.value = serverData.data.month;
+        console.log("value of month below: ");
+        console.log(month.value);
         let day = document.getElementById("dayField");
         day.value = serverData.data.day;
         let year = document.getElementById("yearField");
