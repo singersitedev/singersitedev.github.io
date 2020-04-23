@@ -405,20 +405,24 @@ function processGetRequest() {
     console.log(clientData);
     window.confirm("sometext");
     window.confirm(clientData);
-    fetch(document.getElementById("serverUrlField").value, {
-        method: 'post',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({clientData})
-    }).then(response => response.json())
-        .then(serverData => {
-            if(state.page == "upcomingEvents")
-                setUpcomingEventsForm(serverData);
-            else if(state.page == "photoGallery")
-                setPhotoGalleryForm(serverData);
-            else if(state.page == "musicAndVideos")
-                setMusicAndVideosForm(serverData);
-            state.isStageTwo = true;
-        });
+    if(document.getElementById("serverUrlField").value != null) {
+        fetch(document.getElementById("serverUrlField").value, {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({clientData})
+        }).then(response => response.json())
+            .then(serverData => {
+                if(state.page == "upcomingEvents")
+                    setUpcomingEventsForm(serverData);
+                else if(state.page == "photoGallery")
+                    setPhotoGalleryForm(serverData);
+                else if(state.page == "musicAndVideos")
+                    setMusicAndVideosForm(serverData);
+                state.isStageTwo = true;
+            });
+    }
+    else
+        console.log("error: no server address");
 }
 
 function processPostAddRequest() {
