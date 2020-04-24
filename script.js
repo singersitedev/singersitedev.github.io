@@ -411,10 +411,14 @@ function processGetRequest() {
             .then(serverData => {
                 if(state.page == "upcomingEvents")
                     setUpcomingEventsForm(serverData);
-                else if(state.page == "photoGallery")
+                else if(state.page == "photoGallery") {
+                    state.index = serverData.data.photoTitle; //because title is used instead of index
                     setPhotoGalleryForm(serverData);
-                else if(state.page == "musicAndVideos")
+                }
+                else if(state.page == "musicAndVideos") {
+                    state.index = serverData.data.videoTitle;
                     setMusicAndVideosForm(serverData);
+                }
                 state.isStageTwo = true;
             });
     }
@@ -503,7 +507,8 @@ function processPostEditRequest() {
                 action: 'edit',
                 page: 'photoGallery',
                 photoUrl: document.getElementById("photoUrlField").value,
-                photoTitle: document.getElementById("photoTitleField").value
+                photoTitle: document.getElementById("photoTitleField").value,
+                oldPhotoTitle: state.index
             };
         }
         else if(state.page == "musicAndVideos") {
@@ -513,7 +518,8 @@ function processPostEditRequest() {
                 page: 'musicAndVideos',
                 videoPreviewUrl: document.getElementById("vieoPreviewUrlField").value,
                 videoUrl: document.getElementById("videoUrlField").value,
-                videoTitle: document.getElementById("videoTitleField").value
+                videoTitle: document.getElementById("videoTitleField").value,
+                oldPhotoTitle: state.index
             };
         }
         fetch(document.getElementById("serverUrlField").value, {
